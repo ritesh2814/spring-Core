@@ -1,10 +1,8 @@
 package in.pwskills.nitin.bean;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
-@Primary
+@Component(value = "dtdc")
 public class DTDC implements ICourier {
 
 	@Override

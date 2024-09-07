@@ -1,11 +1,11 @@
 package in.pwskills.nitin.bean;
 
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
-@Primary
-public class DTDC implements ICourier {
+@Component("fedex")
+@Scope("prototype")
+public class FedEx implements ICourier {
 
 	@Override
 	public String deliverOrder(Integer oid) {
@@ -14,7 +14,7 @@ public class DTDC implements ICourier {
 
 	@Override
 	public String toString() {
-		return "DTDC []";
+		return "FedEx []";
 	}
 
 }
